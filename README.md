@@ -60,3 +60,7 @@ wenxianbianhao/
 │   └── build-xpi.sh
 └── dist/
 ```
+
+## License
+
+本项目采用 MIT License 开源，详见 [LICENSE](./LICENSE)。
