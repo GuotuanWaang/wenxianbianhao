@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "分类文献编号",
+  "version": "0.1.4",
+  "description": "对所选分类下的文献批量编号，并写入 extra 字段的插件专用编号。",
+  "author": "local",
+  "homepage_url": "https://local.collection-numbering.plugin/",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png",
+    "128": "icons/icon-128.png"
+  },
+  "applications": {
+    "zotero": {
+      "id": "collection-numbering@example.com",
+      "update_url": "https://local.collection-numbering.plugin/updates.json",
+      "strict_min_version": "6.999",
+      "strict_max_version": "9.9.*"
+    }
+  }
+}
