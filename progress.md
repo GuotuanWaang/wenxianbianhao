@@ -125,6 +125,26 @@
   - `progress.md` (updated)
   - `README.md` (updated)
 
+### Phase 10: 项目更名与 Latest Release 更新（当前任务）
+- **Status:** in_progress
+- Actions taken:
+  - 检查当前 Release：`v0.1.4` 仍为 Latest，需要发布新版本覆盖。
+  - 将插件显示名更新为“文献分类编号与题名翻译”（`manifest.json`、`bootstrap.js`）。
+  - 将 README 中英文项目名、设置页名称、版本号同步到 `0.2.4`。
+  - 将 `package.json` 版本升至 `0.2.4` 并同步描述。
+  - 更新 `task_plan.md` 与 `findings.md` 对齐本轮目标。
+  - 执行 `npm run build` 生成 `dist/collection-numbering-0.2.4.xpi`。
+  - 执行 `node --check bootstrap.js` 校验语法。
+  - 执行 `unzip -l` 校验 0.2.4 包内容包含 `manifest/bootstrap/icons/addon`。
+- Files created/modified:
+  - `manifest.json` (updated to 0.2.4)
+  - `bootstrap.js` (updated)
+  - `package.json` (updated to 0.2.4)
+  - `README.md` (updated)
+  - `task_plan.md` (updated)
+  - `findings.md` (updated)
+  - `progress.md` (updated)
+
 ## Test Results
 | Test | Input | Expected | Actual | Status |
 |------|-------|----------|--------|--------|
@@ -141,6 +161,8 @@
 | 设置页打包检查 | `unzip -l dist/collection-numbering-0.2.1.xpi` | 包含 addon/chrome/content/preferencesPane.xhtml | 通过 | ✓ |
 | README 任务构建验证 | `npm run build` | 文档命令可构建并输出 XPI | 生成 `dist/collection-numbering-0.2.3.xpi` | ✓ |
 | README 任务语法验证 | `node --check bootstrap.js` | 语法检查通过 | 通过 | ✓ |
+| 更名任务构建验证 | `npm run build` | 输出 0.2.4 安装包 | 生成 `dist/collection-numbering-0.2.4.xpi` | ✓ |
+| 更名任务包内容检查 | `unzip -l dist/collection-numbering-0.2.4.xpi` | 包含 manifest/bootstrap/icons/addon | 通过 | ✓ |
 
 ## Error Log
 | Timestamp | Error | Attempt | Resolution |
@@ -148,6 +170,7 @@
 | 2026-02-24 | `sed` 读取不存在文件 `build-variants.js` | 1 | 改为读取存在的 `build-xpi.sh` |
 | 2026-02-24 | 重新打包后旧条目 `icon-1024.png` 仍出现在 XPI | 1 | 构建前删除同名输出包，并限制打包图标文件集合 |
 | 2026-02-28 | 并行工具调用时 `unzip` 先于构建完成导致找不到新包 | 1 | 改为构建后串行验证包内容 |
+| 2026-02-28 | 更名任务中并行检查导致 `unzip` 早于构建完成 | 1 | 再次采用串行校验并确认 `0.2.4` 包存在 |
 
 ## 5-Question Reboot Check
 | Question | Answer |

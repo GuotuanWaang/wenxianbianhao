@@ -1,8 +1,8 @@
 {
-  "name": "zotero-collection-numbering",
-  "version": "0.2.3",
+  "name": "zotero-collection-numbering-title-translation",
+  "version": "0.2.4",
   "private": true,
-  "description": "Zotero 8 plugin for numbering items in selected collections.",
+  "description": "Zotero plugin for collection numbering and title translation.",
   "scripts": {
     "build": "bash ./scripts/build-xpi.sh"
   }

@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "分类文献编号",
-  "version": "0.2.3",
+  "name": "文献分类编号与题名翻译",
+  "version": "0.2.4",
   "description": "对所选分类下的文献编号，并支持在 Zotero 设置页配置 DeepSeek 题名翻译（关系字段存储，不写入其他字段）。",
   "author": "local",
   "homepage_url": "https://local.collection-numbering.plugin/",

@@ -1,4 +1,4 @@
-# 文献分类编号 / Collection Numbering
+# 文献分类编号与题名翻译 / Collection Numbering and Title Translation
 
 Zotero add-on for:
 - Batch numbering items in a selected collection
@@ -12,7 +12,7 @@ Repository: <https://github.com/GuotuanWaang/wenxianbianhao>
 
 ### 项目简介
 
-`分类文献编号` 是一个 Zotero 插件，支持对选中分类中的文献进行顺序编号，并可调用 DeepSeek 将英文题名翻译为中文。
+`文献分类编号与题名翻译` 是一个 Zotero 插件，支持对选中分类中的文献进行顺序编号，并可调用 DeepSeek 将英文题名翻译为中文。
 
 ### 主要功能
 
@@ -23,7 +23,7 @@ Repository: <https://github.com/GuotuanWaang/wenxianbianhao>
 - 分类右键入口：
   - `对该分类文献编号...`
   - `题名翻译（DeepSeek）...`
-- Zotero 设置页（左侧）新增插件页：`分类文献编号`
+- Zotero 设置页（左侧）新增插件页：`文献分类编号与题名翻译`
 - 仅处理常规文献条目（自动跳过附件/笔记/注释）
 - 自动注册两列：
   - `编号`（显示 `extra/CollectionNumber`）
@@ -44,7 +44,7 @@ Repository: <https://github.com/GuotuanWaang/wenxianbianhao>
 - Zotero:
   - `strict_min_version: 6.999`
   - `strict_max_version: 9.9.*`
-- 当前版本：`0.2.3`
+- 当前版本：`0.2.4`
 
 ### 安装与构建
 
@@ -64,7 +64,7 @@ dist/collection-numbering-<version>.xpi
 例如当前版本：
 
 ```text
-dist/collection-numbering-0.2.3.xpi
+dist/collection-numbering-0.2.4.xpi
 ```
 
 3. 在 Zotero 安装：
@@ -77,7 +77,7 @@ dist/collection-numbering-0.2.3.xpi
 
 1. 在左侧面板选中一个分类
 2. 如需题名翻译，先打开：
-   - Zotero `设置 -> 分类文献编号`
+   - Zotero `设置 -> 文献分类编号与题名翻译`
    - 填写 `API Key / Model / Endpoint`
 3. 执行编号命令或翻译命令
 4. 查看弹窗统计结果（成功、跳过、失败）
@@ -118,7 +118,7 @@ wenxianbianhao/
 
 ### Overview
 
-`Collection Numbering` is a Zotero add-on that:
+`Collection Numbering and Title Translation` is a Zotero add-on that:
 - Assigns sequential numbers to items in a selected collection
 - Translates English paper titles using DeepSeek
 
@@ -129,7 +129,7 @@ wenxianbianhao/
   - `Tools -> 题名翻译（DeepSeek）...` (Translate titles with DeepSeek)
   - `Tools -> 配置 DeepSeek 题名翻译...` (Open translation settings)
 - Collection context menu commands for numbering and translation
-- Dedicated settings pane in Zotero Preferences: `分类文献编号`
+- Dedicated settings pane in Zotero Preferences: `文献分类编号与题名翻译`
 - Only regular items are processed (attachments/notes/annotations are skipped)
 - Two custom item columns:
   - `编号` (`extra/CollectionNumber`)
@@ -150,7 +150,7 @@ wenxianbianhao/
 - Zotero version range:
   - Min: `6.999`
   - Max: `9.9.*`
-- Current add-on version: `0.2.3`
+- Current add-on version: `0.2.4`
 
 ### Build and Install
 
@@ -175,7 +175,7 @@ dist/collection-numbering-<version>.xpi
 
 ### Configuration
 
-Open Zotero Preferences and go to `分类文献编号`, then set:
+Open Zotero Preferences and go to `文献分类编号与题名翻译`, then set:
 - `API Key`
 - `Model`
 - `API Endpoint`

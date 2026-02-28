@@ -1,6 +1,6 @@
 var CollectionNumberingPluginInstance;
 
-const ADDON_NAME = "分类文献编号";
+const ADDON_NAME = "文献分类编号与题名翻译";
 const TOOLS_MENUITEM_ID = "collection-numbering-tools-menuitem";
 const TOOLS_TRANSLATE_MENUITEM_ID = "collection-numbering-tools-translate-menuitem";
 const TOOLS_CONFIG_MENUITEM_ID = "collection-numbering-tools-config-menuitem";
@@ -21,7 +21,7 @@ const PREF_API_MODEL = "apiModel";
 const DEFAULT_API_ENDPOINT = "https://api.deepseek.com";
 const DEFAULT_API_MODEL = "deepseek-chat";
 const PREFERENCE_PANE_KEY = "collection-numbering-prefpane";
-const PREFERENCE_PANE_LABEL = "分类文献编号";
+const PREFERENCE_PANE_LABEL = "文献分类编号与题名翻译";
 const YIELD_EVERY = 120;
 const MAX_PAD_LENGTH = 12;
 const TRANSLATE_TIMEOUT_MS = 30000;
@@ -630,7 +630,7 @@ CollectionNumberingPlugin.prototype.openConfigFromWindow = function (window, sil
 		Services.prompt.alert(
 			window,
 			ADDON_NAME,
-			"已打开 Zotero 设置页，请在“分类文献编号”中填写 DeepSeek API 参数。"
+			"已打开 Zotero 设置页，请在“文献分类编号与题名翻译”中填写 DeepSeek API 参数。"
 		);
 	}
 	return current.apiKey ? current : null;

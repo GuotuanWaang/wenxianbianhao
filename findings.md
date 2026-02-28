@@ -61,5 +61,12 @@
   - 题名翻译写入 `relations`（predicate: `https://local.collection-numbering.plugin/relation/title-translation`）。
   - Zotero 设置页通过 `Zotero.PreferencePanes.register()` 注册 `addon/chrome/content/preferencesPane.xhtml`。
 
+## 2026-02-28 项目更名与 Release 更新新发现
+- 当前 `manifest.json` 插件名为“分类文献编号”，需要改为“文献分类编号与题名翻译”。
+- `bootstrap.js` 中 `ADDON_NAME` 与 `PREFERENCE_PANE_LABEL` 使用旧名称，需要同步。
+- 当前 README 已是双语结构，但标题、设置页名称、版本示例仍需改名并升级到 `0.2.4`。
+- `gh release list` 显示目前 Latest 为 `v0.1.4`（2026-02-24），说明 0.2.x 尚未发布成 Release。
+- 版本升级方案：`manifest.json` 与 `package.json` 一并从 `0.2.3` 升到 `0.2.4`，构建并发布 `v0.2.4`。
+
 ## Visual/Browser Findings
 - 本任务未使用网页或视觉信息源。
