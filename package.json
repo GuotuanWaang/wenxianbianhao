@@ -1,6 +1,6 @@
 {
   "name": "zotero-collection-numbering",
-  "version": "0.1.4",
+  "version": "0.2.3",
   "private": true,
   "description": "Zotero 8 plugin for numbering items in selected collections.",
   "scripts": {

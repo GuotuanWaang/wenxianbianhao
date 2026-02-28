@@ -1,0 +1,53 @@
+<groupbox
+  id="collection-numbering-prefpane-main"
+  onload="if (Zotero &amp;&amp; Zotero.CollectionNumbering) { Zotero.CollectionNumbering.onPreferencePaneLoad(window); }"
+  xmlns:html="http://www.w3.org/1999/xhtml"
+>
+  <description style="margin-bottom: 10px;">
+    在此配置 DeepSeek API，用于分类题名翻译。配置会自动保存。
+  </description>
+
+  <hbox align="center" style="margin: 4px 0;">
+    <label value="API Key" style="min-width: 130px;" />
+    <html:input
+      id="collection-numbering-pref-apiKey"
+      type="password"
+      style="flex: 1; min-height: 28px; padding: 4px 8px;"
+    />
+  </hbox>
+
+  <hbox align="center" style="margin: 4px 0;">
+    <label value="模型" style="min-width: 130px;" />
+    <menulist id="collection-numbering-pref-model" flex="1">
+      <menupopup>
+        <menuitem value="deepseek-chat" label="deepseek-chat" />
+        <menuitem value="deepseek-reasoner" label="deepseek-reasoner" />
+      </menupopup>
+    </menulist>
+  </hbox>
+
+  <hbox align="center" style="margin: 4px 0;">
+    <label value="API Endpoint" style="min-width: 130px;" />
+    <html:input
+      id="collection-numbering-pref-endpoint"
+      type="text"
+      style="flex: 1; min-height: 28px; padding: 4px 8px;"
+    />
+  </hbox>
+
+  <hbox align="center" style="margin: 6px 0;">
+    <label value="" style="min-width: 130px;" />
+    <button
+      id="collection-numbering-pref-test"
+      label="验证 API Key"
+      oncommand="if (Zotero &amp;&amp; Zotero.CollectionNumbering) { Zotero.CollectionNumbering.testPreferenceConnection(window); }"
+    />
+    <label id="collection-numbering-pref-test-status" value="" style="margin-left: 8px;" />
+  </hbox>
+
+  <separator class="thin" style="margin: 8px 0;" />
+
+  <description style="opacity: 0.85;">
+    翻译命令会写入插件专用关系字段（relations），不覆盖原标题，也不写入“其他(Extra)”。
+  </description>
+</groupbox>

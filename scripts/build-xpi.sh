@@ -7,6 +7,7 @@ BUILD_DIR="$ROOT_DIR/.build-xpi"
 MANIFEST_PATH="$ROOT_DIR/manifest.json"
 BOOTSTRAP_PATH="$ROOT_DIR/bootstrap.js"
 ICONS_DIR="$ROOT_DIR/icons"
+ADDON_DIR="$ROOT_DIR/addon"
 
 if [[ ! -f "$MANIFEST_PATH" || ! -f "$BOOTSTRAP_PATH" ]]; then
   echo "Missing manifest.json or bootstrap.js in $ROOT_DIR" >&2
@@ -30,11 +31,18 @@ if [[ -d "$ICONS_DIR" ]]; then
     fi
   done
 fi
+if [[ -d "$ADDON_DIR" ]]; then
+  cp -R "$ADDON_DIR" "$BUILD_DIR/addon"
+fi
 
 (
   cd "$BUILD_DIR"
-  if [[ -d "icons" ]]; then
+  if [[ -d "icons" && -d "addon" ]]; then
+    /usr/bin/zip -X -r "$OUT_PATH" manifest.json bootstrap.js icons addon >/dev/null
+  elif [[ -d "icons" ]]; then
     /usr/bin/zip -X -r "$OUT_PATH" manifest.json bootstrap.js icons >/dev/null
+  elif [[ -d "addon" ]]; then
+    /usr/bin/zip -X -r "$OUT_PATH" manifest.json bootstrap.js addon >/dev/null
   else
     /usr/bin/zip -X -r "$OUT_PATH" manifest.json bootstrap.js >/dev/null
   fi
