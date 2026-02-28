@@ -109,7 +109,7 @@
   - `dist/collection-numbering-0.2.1.xpi` (created)
 
 ### Phase 9: README 双语化与 GitHub 发布（当前任务）
-- **Status:** in_progress
+- **Status:** complete
 - Actions taken:
   - 读取并确认项目核心文件：`manifest.json`、`bootstrap.js`、`preferencesPane.xhtml`、`scripts/build-xpi.sh`、`README.md`。
   - 检查 Git 状态与远端：当前分支 `main`，远端 `origin` 已配置为 `GuotuanWaang/wenxianbianhao`。
@@ -117,6 +117,8 @@
   - 重写 `README.md` 为单文件中英双语文档，内容与当前实现对齐（编号写入 `extra/CollectionNumber`，翻译写入 `relations`）。
   - 执行 `npm run build` 验证 README 中构建命令与产物路径。
   - 执行 `node --check bootstrap.js`，确认主脚本语法正常。
+  - 提交全部改动：`d40e861 feat: release v0.2.3 with bilingual README and settings pane`。
+  - 推送到 GitHub：`origin/main`（`07a5fef -> d40e861`）。
 - Files created/modified:
   - `task_plan.md` (updated)
   - `findings.md` (updated)
